@@ -7,7 +7,7 @@ function copyRepo
   declare -a arr=(Plugin/GUB/Project/Android
                   Plugin/GUB/Source
                   Plugin/DvbCssWc/Source
-				  Plugin/DvbCssWc/Project/Android
+				          Plugin/DvbCssWc/Project/Android
                   Plugin/Externals/gstreamer/Project/Android
                  )
 

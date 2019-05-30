@@ -6,16 +6,16 @@ services:
     build:
       context: .
       args:
-        NDK_TARGET_LEVEL:         android-23
+        NDK_TARGET_LEVEL:         android-28
         NDK_APP_ABI:              armeabi-v7a
-        ANT_VERSION:              1.9.4
+        ANT_VERSION:              1.9.9
         GST_ANDROID_ARCH:         armv7
-        GST_ANDROID_VERSION:      1.10.5
+        GST_ANDROID_VERSION:      1.16.0
     environment:
       MOUNT_GST_UNITY_BRIDGE:     /mnt/gst-unity-bridge
       MOUNT_OUTPUT_PATH:          /mnt/output
       MOUNT_LIB_GST_ANDROID:      /mnt/libgstreamer_android.so
-    #entrypoint: /bin/bash
+    # entrypoint: /bin/sh
     volumes:
-      - ../../../../../:/mnt/immersiatv-player:ro
-      - ../../../Build/Android:/mnt/output
+      - $GUB_HOME:/mnt/gst-unity-bridge:ro
+      - $GUB_HOME/output:/mnt/output

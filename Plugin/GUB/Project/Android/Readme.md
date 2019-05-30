@@ -39,7 +39,7 @@ Compile GUB for Android:
 
 ### Settings
 
-In ``docker/docker-compose.yml`` is configuration for building and running docker image.  
+In ``docker/docker-compose.yml`` is configuration for building and running docker image.
 If you don't want to use default settings, you can modify this file.
 
 ----------
@@ -70,13 +70,15 @@ docker-compose -f docker/docker-compose.yml build
 Compile GUB for Android:
 
 ```
+export GUB_HOME=$(cd ../../../..; pwd)
+mkdir -p $GUB_HOME/output/gub
 docker-compose -f docker/docker-compose.yml run gub-android
 ```
 
 
 ### Settings
 
-In ``docker/docker-compose.yml`` is configuration for building and running docker image.  
+In ``docker/docker-compose.yml`` is configuration for building and running docker image.
 If you don't want to use default settings, you can modify this file.
 
 ----------
@@ -99,9 +101,9 @@ Configure *Docker Toolbox* and *VirtualBox*:
 2. Run *VirtualBox*
 3. Stop the image named *default*. Close -> Power off
 4. On image named *default* go to Settings -> Shared Folders
-5. Add your gst-unity-bridge repository folder as shared folder:  
-***Folder Path*** - path to your gst-unity-bridge repository  
-***Folder Name*** = gst-unity-bridge  
+5. Add your gst-unity-bridge repository folder as shared folder:
+***Folder Path*** - path to your gst-unity-bridge repository
+***Folder Name*** = gst-unity-bridge
 ***Auto-mount*** - checked
 6. Reopen *Docker Toolbox* and navigate to this *Readme* location
 
@@ -123,7 +125,7 @@ docker-compose -f docker/docker-compose-toolbox.yml run gub-android
 
 ### Settings
 
-In ``docker/docker-compose-toolbox.yml`` is configuration for building and running docker image.  
+In ``docker/docker-compose-toolbox.yml`` is configuration for building and running docker image.
 If you don't want to use default settings, you can modify this file.
 
 ----------
